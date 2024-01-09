@@ -9,25 +9,29 @@
 <body>
     <div class="container">
         <div id="crossword">
-            <div class="word vertical" id="esh" data-word="esh" data-link="andyh" data-go-index="4" data-link-index="2"  num="1.">
+            <div class="word vertical" id="esh" data-word="esh" data-link="andyh" data-go-index="4" data-link-index="2"  num="1." 
+            x="6"  y="3">
                 <input class="cell" type="text" data-index="0" data-char="e">
                 <input class="cell" type="text" data-index="1" data-char="s">
                 <input class="cell" type="text" data-index="2" data-char="h" link="1" oninput="updateOtherInput(this)">
             </div>
-            <div class="word horizontal" id="andyh" data-word="andyh" data-link="esh" data-go-index="2" data-link-index="4" data-link2="chuong" data-go-index2="4" data-link-index2="1" num="2.">
+            <div class="word horizontal" data-coord-x="10"  data-coord-y="10" id="andyh" data-word="andyh" data-link="esh" data-go-index="2" data-link-index="4" data-link2="chuong" data-go-index2="4" data-link-index2="1" num="2."
+            x="2"  y="5">
                 <input class="cell ques" num="2" type="text" data-index="0" data-char="a">
                 <input class="cell" type="text" data-index="1" data-char="n" link="2" oninput="updateOtherInput2(this)">
                 <input class="cell" type="text" data-index="2" data-char="d">
                 <input class="cell" type="text" data-index="3" data-char="y">
                 <input class="cell" type="text" data-index="4" data-char="h" link="1" oninput="updateOtherInput(this)">
             </div>
-            <div class="word horizontal" id="john" data-word="john" data-link="chuong" data-go-index="1" data-link-index="2" num="3.">
+            <div class="word horizontal" data-coord-x="10"  data-coord-y="10" id="john" data-word="john" data-link="chuong" data-go-index="1" data-link-index="2" num="3."
+            x="1"  y="2">
                 <input class="cell ques" num="3" type="text" data-index="0" data-char="j">
                 <input class="cell" type="text" data-index="1" data-char="o">
                 <input class="cell" type="text" data-index="2" data-char="h"link="1" oninput="updateOtherInput(this)">
                 <input class="cell" type="text" data-index="3" data-char="n">
             </div>
-            <div class="word vertical" id="chuong" data-word="chuong" data-link="andyh" data-go-index="1" data-link-index="4" data-link2="john" data-go-index2="2" data-link-index2="1" num="4.">
+            <div class="word vertical" data-coord-x="10"  data-coord-y="10" id="chuong" data-word="chuong" data-link="andyh" data-go-index="1" data-link-index="4" data-link2="john" data-go-index2="2" data-link-index2="1" num="4."
+            x="3"  y="1">
                 <input class="cell ques" num="4" type="text" data-index="0" data-char="c">
                 <input class="cell" type="text" data-index="1" data-char="h" link="2" oninput="updateOtherInput2(this)">
                 <input class="cell" type="text" data-index="2" data-char="u">

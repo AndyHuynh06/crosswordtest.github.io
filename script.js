@@ -30,21 +30,18 @@ prompts.forEach(prompt => {
                 cell.style.backgroundColor = 'green';
             });
             message.textContent = `You got the word "${wordName}" right!`;
+            checkButton.disabled = true;
         } else {
             trials++;
             if (trials >= maxTrials) {
                 revealAnswer(cells);
                 message.textContent = `You've exceeded the maximum trials for the word "${wordName}". The correct answer is revealed.`;
+                checkButton.disabled = true;
             } else {
                 cells.forEach(cell => {
-                    ontop(cell)
-                    if (cell.value.toLowerCase() === cell.dataset.char) {
-                        cell.style.backgroundColor = 'green';
-                        cell.disabled = true;
-                    } else {
-                        cell.style.backgroundColor = 'red';
-                    }
-                });
+                    ontop(cell);
+                    cell.style.backgroundColor = 'red';
+                })
             }
         }
     });
@@ -112,3 +109,20 @@ function updateOtherInput2(childElement) {
     console.log(inputText)
     word2text.querySelector(`[data-index="${goIndex}"]`).value = inputText;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const words = document.querySelectorAll('.word');
+
+    words.forEach(word => {
+        const x = parseInt(word.getAttribute('x'));
+        const y = parseInt(word.getAttribute('y'));
+        const cellWidth = 30; // Adjust this value according to your cell width
+        const cellOffset = 1; // Offset for starting point
+
+        const leftPosition = (x - cellOffset) * cellWidth;
+        const topPosition = (y - cellOffset) * cellWidth;
+
+        word.style.left = `${leftPosition}px`;
+        word.style.top = `${topPosition}px`;
+    });
+});
